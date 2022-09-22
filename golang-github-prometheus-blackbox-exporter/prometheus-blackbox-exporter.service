@@ -12,6 +12,7 @@ ExecStart=/usr/bin/prometheus-blackbox-exporter --config.file=/etc/prometheus/bl
 ExecReload=/bin/kill -HUP $MAINPID
 TimeoutStopSec=20s
 SendSIGKILL=no
+AmbientCapabilities=CAP_NET_RAW
 
 [Install]
 WantedBy=multi-user.target

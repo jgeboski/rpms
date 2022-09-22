@@ -112,12 +112,12 @@ install -Dpm 0644 %{S:3} %{buildroot}%{_sysusersdir}/%{shortname}.conf
 %systemd_postun_with_restart %{shortname}.service
 
 %files
-%attr(0755,root,root) %caps(cap_net_raw=p) %{_bindir}/%{shortname}
 %config(noreplace) %{_sysconfdir}/default/%{shortname}
 %config(noreplace) %{_sysconfdir}/prometheus/blackbox.yml
 %doc CHANGELOG.md CODE_OF_CONDUCT.md CONFIGURATION.md MAINTAINERS.md README.md
 %doc SECURITY.md
 %license LICENSE NOTICE
+%{_bindir}/%{shortname}
 %{_datadir}/prometheus/blackbox-exporter/example.yml
 %{_sysusersdir}/%{shortname}.conf
 %{_unitdir}/%{shortname}.service
