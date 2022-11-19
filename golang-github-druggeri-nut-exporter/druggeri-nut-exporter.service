@@ -1,0 +1,17 @@
+[Unit]
+Description=Prometheus exporter for Prometheus Network UPS Tools (NUT)
+Documentation=https://github.com/DRuggeri/nut_exporter
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+Restart=on-failure
+User=prometheus
+EnvironmentFile=/etc/default/druggeri-nut-exporter
+ExecStart=/usr/bin/druggeri-nut-exporter $ARGS
+ExecReload=/bin/kill -HUP $MAINPID
+TimeoutStopSec=20s
+SendSIGKILL=no
+
+[Install]
+WantedBy=multi-user.target
