@@ -1,0 +1,17 @@
+[Unit]
+Description=SNMP Exporter for Prometheus
+Documentation=https://github.com/prometheus/snmp_exporter
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+Restart=on-failure
+User=prometheus
+EnvironmentFile=/etc/default/prometheus-snmp-exporter
+ExecStart=/usr/bin/prometheus-snmp-exporter --config.file=/etc/prometheus/snmp.yml $ARGS
+ExecReload=/bin/kill -HUP $MAINPID
+TimeoutStopSec=20s
+SendSIGKILL=no
+
+[Install]
+WantedBy=multi-user.target
