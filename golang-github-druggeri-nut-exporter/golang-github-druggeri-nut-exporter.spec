@@ -4,7 +4,9 @@
 
 # https://github.com/DRuggeri/nut_exporter
 %global goipath         github.com/DRuggeri/nut_exporter
-Version:                2.4.2
+# >=3.0.0 bumps the prometheus/exporter-toolkit dependency to >=0.8.0, which
+# Fedora does not yet have. For now, just run an older version.
+Version:                2.5.3
 
 %gometa -f
 
