@@ -1,6 +1,6 @@
 # golang-github-prometheus-snmp-exporter
- 
-The golang-github-prometheus-snmp-exporter package
+
+The golang-github-prometheus-snmp-exporter package.
 
 Mostly a clone of [golang-github-prometheus-node-exporter][1].
 

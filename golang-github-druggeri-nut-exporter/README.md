@@ -1,6 +1,6 @@
 # golang-github-druggeri-nut-exporter
- 
-The golang-github-druggeri-nut-exporter package
+
+The golang-github-druggeri-nut-exporter package.
 
 Mostly a clone of [golang-github-prometheus-node-exporter][1].
 
