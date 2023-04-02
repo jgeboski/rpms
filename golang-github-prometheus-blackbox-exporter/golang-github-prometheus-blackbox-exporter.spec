@@ -4,6 +4,8 @@
 
 # https://github.com/prometheus/blackbox_exporter
 %global goipath         github.com/prometheus/blackbox_exporter
+# >=0.23.0 bumps the prometheus/exporter-toolkit dependency to >=0.8.0, which
+# Fedora does not yet have. For now, just run an older version.
 Version:                0.22.0
 
 %gometa -f
