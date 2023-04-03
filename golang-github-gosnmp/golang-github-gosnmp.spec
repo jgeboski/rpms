@@ -17,7 +17,7 @@ Name:           %{goname}
 Release:        %autorelease
 Summary:        An SNMP library written in Go
 
-License:        # FIXME
+License:        BSD
 URL:            %{gourl}
 Source:         %{gosource}
 
