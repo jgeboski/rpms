@@ -4,7 +4,7 @@
 
 # https://github.com/gosnmp/gosnmp
 %global goipath         github.com/gosnmp/gosnmp
-Version:                1.35.0
+Version:                1.36.1
 
 %gometa -f
 
@@ -20,9 +20,6 @@ Summary:        An SNMP library written in Go
 License:        BSD
 URL:            %{gourl}
 Source:         %{gosource}
-
-BuildRequires:  golang(github.com/golang/mock/gomock)
-BuildRequires:  golang(github.com/stretchr/testify/require)
 
 %description
 %{common_description}
