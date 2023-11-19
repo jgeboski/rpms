@@ -1,0 +1,13 @@
+[Unit]
+Description=SNMP Exporter for Prometheus
+Documentation=https://unpoller.com/docs/poller/introduction
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+Restart=on-failure
+User=unpoller
+ExecStart=/usr/bin/unpoller --config=/etc/unpoller/up.conf
+
+[Install]
+WantedBy=multi-user.target

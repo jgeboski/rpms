@@ -1,0 +1,2 @@
+#Type Name         ID  GECOS                        Home directory        Shell
+u     unpoller     -   "Unpoller user account"      /var/lib/unpoller     /sbin/nologin
