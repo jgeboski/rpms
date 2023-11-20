@@ -76,6 +76,7 @@ install -m 0755 -vd                     %{buildroot}%{_bindir}
 install -m 0755 -vp %{gobuilddir}/bin/* %{buildroot}%{_bindir}/
 install -Dpm 0644 examples/up.conf.example %{buildroot}%{_sysconfdir}/%{shortname}/up.conf
 install -Dpm 0644 %{S:1} %{buildroot}%{_unitdir}/%{shortname}.service
+install -Dpm 0644 %{S:2} %{buildroot}%{_sysusersdir}/%{shortname}.conf
 
 %if %{with check}
 %check
@@ -95,6 +96,7 @@ install -Dpm 0644 %{S:1} %{buildroot}%{_unitdir}/%{shortname}.service
 %systemd_postun_with_restart %{shortname}.service
 
 %files
+%config(noreplace) %{_sysconfdir}/%{shortname}/up.conf
 %doc CODE_OF_CONDUCT.md CONTRIBUTING.md examples/MANUAL.md README.md
 %doc pkg/datadogunifi/README.datadogunifi.md
 %doc pkg/influxunifi/README.influxunifi.md pkg/inputunifi/README.inputunifi.md
@@ -107,7 +109,7 @@ install -Dpm 0644 %{S:1} %{buildroot}%{_unitdir}/%{shortname}.service
 %license pkg/poller/LICENSE.poller pkg/promunifi/LICENSE.promunifi
 %license pkg/webserver/LICENSE.webserver
 %{_bindir}/*
-%{_sysconfdir}/%{shortname}/up.conf
+%{_sysusersdir}/%{shortname}.conf
 %{_unitdir}/%{shortname}.service
 
 %gopkgfiles
