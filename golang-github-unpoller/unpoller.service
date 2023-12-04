@@ -1,5 +1,5 @@
 [Unit]
-Description=SNMP Exporter for Prometheus
+Description=UniFi Controller Data Exporter
 Documentation=https://unpoller.com/docs/poller/introduction
 Requires=network-online.target
 After=network-online.target
