@@ -5,7 +5,7 @@
 
 # https://github.com/prometheus/snmp_exporter
 %global goipath         github.com/prometheus/snmp_exporter
-Version:                0.24.1
+Version:                0.25.0
 
 %gometa -f
 
@@ -28,11 +28,7 @@ Source1:        %{shortname}.conf
 Source2:        %{shortname}.service
 Source3:        %{shortname}.sysusers
 
-# Fedora's golang-github-prometheus-common-devel is < 0.41.0, but
-# golang-github-prometheus-exporter-toolkit is >= 0.9.0. The old
-# kingpin gopkg import is still required by prometheus-common, but
-# exporter-toolkit requires the new github import.
-Patch0:         %{shortname}-kingpin-import-fix.patch
+Patch0:         prometheus-snmp-exporter-generator-paths.patch
 
 BuildRequires:  net-snmp-devel
 BuildRequires:  systemd-rpm-macros
@@ -68,8 +64,8 @@ install -m 0755 -vp %{gobuilddir}/bin/* %{buildroot}%{_bindir}/
 mv %{buildroot}%{_bindir}/snmp_exporter %{buildroot}%{_bindir}/%{shortname}
 mv %{buildroot}%{_bindir}/generator     %{buildroot}%{_bindir}/prometheus-snmp-generator
 
-install -Dpm 0644 generator/generator.yml %{buildroot}%{_datadir}/%{shortname}/generator.yml
 install -Dpm 0644 snmp.yml %{buildroot}%{_sysconfdir}/prometheus/snmp.yml
+install -Dpm 0644 generator/generator.yml %{buildroot}%{_sysconfdir}/prometheus/snmp-generator.yml
 install -Dpm 0644 %{S:1} %{buildroot}%{_sysconfdir}/default/%{shortname}
 install -Dpm 0644 %{S:2} %{buildroot}%{_unitdir}/%{shortname}.service
 install -Dpm 0644 %{S:3} %{buildroot}%{_sysusersdir}/%{shortname}.conf
@@ -95,12 +91,12 @@ install -Dpm 0644 %{S:3} %{buildroot}%{_sysusersdir}/%{shortname}.conf
 %files
 %config(noreplace) %{_sysconfdir}/default/%{shortname}
 %config(noreplace) %{_sysconfdir}/prometheus/snmp.yml
+%config(noreplace) %{_sysconfdir}/prometheus/snmp-generator.yml
 %doc CHANGELOG.md CODE_OF_CONDUCT.md CONTRIBUTING.md MAINTAINERS.md README.md
 %doc SECURITY.md generator/FORMAT.generator.md generator/README.generator.md
 %license LICENSE NOTICE
 %{_bindir}/%{shortname}
 %{_bindir}/prometheus-snmp-generator
-%{_datadir}/%{shortname}/generator.yml
 %{_sysusersdir}/%{shortname}.conf
 %{_unitdir}/%{shortname}.service
 

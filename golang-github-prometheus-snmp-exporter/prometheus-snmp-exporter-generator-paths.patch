@@ -1,0 +1,15 @@
+diff --git a/generator/main.go b/generator/main.go
+index 3e21e8d..158dcdd 100644
+--- a/generator/main.go
++++ b/generator/main.go
+@@ -99,8 +99,8 @@ var (
+ 	snmpMIBOpts        = kingpin.Flag("snmp.mibopts", "Toggle various defaults controlling MIB parsing, see snmpwalk --help").String()
+ 	generateCommand    = kingpin.Command("generate", "Generate snmp.yml from generator.yml")
+ 	userMibsDir        = generateCommand.Flag("mibs-dir", "Paths to mibs directory").Default("").Short('m').Strings()
+-	generatorYmlPath   = generateCommand.Flag("generator-path", "Path to the input generator.yml file").Default("generator.yml").Short('g').String()
+-	outputPath         = generateCommand.Flag("output-path", "Path to write the snmp_exporter's config file").Default("snmp.yml").Short('o').String()
++	generatorYmlPath   = generateCommand.Flag("generator-path", "Path to the input generator.yml file").Default("/etc/prometheus/snmp-generator.yml").Short('g').String()
++	outputPath         = generateCommand.Flag("output-path", "Path to write the snmp_exporter's config file").Default("/etc/prometheus/snmp.yml.new").Short('o').String()
+ 	parseErrorsCommand = kingpin.Command("parse_errors", "Debug: Print the parse errors output by NetSNMP")
+ 	dumpCommand        = kingpin.Command("dump", "Debug: Dump the parsed and prepared MIBs")
+ )
