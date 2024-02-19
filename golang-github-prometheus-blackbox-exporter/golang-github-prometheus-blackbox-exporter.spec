@@ -5,9 +5,7 @@
 
 # https://github.com/prometheus/blackbox_exporter
 %global goipath         github.com/prometheus/blackbox_exporter
-# Version >= 0.24.0 requires golang-github-prometheus-common-devel be
-# >= 0.42.0, which Feodra does not yet have.
-Version:                0.23.0
+Version:                0.24.0
 
 %gometa -f
 
@@ -27,12 +25,6 @@ Source0:        %{gosource}
 Source1:        %{shortname}.conf
 Source2:        %{shortname}.service
 Source3:        %{shortname}.sysusers
-
-# Fedora's golang-github-prometheus-common-devel is < 0.41.0, but
-# golang-github-prometheus-exporter-toolkit is >= 0.9.0. The old
-# kingpin gopkg import is still required by prometheus-common, but
-# exporter-toolkit requires the new github import.
-Patch0:         %{shortname}-kingpin-import-fix.patch
 
 BuildRequires:  systemd-rpm-macros
 
