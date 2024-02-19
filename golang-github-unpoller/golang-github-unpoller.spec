@@ -5,7 +5,7 @@
 
 # https://github.com/unpoller/unpoller
 %global goipath         github.com/unpoller/unpoller
-Version:                2.9.4
+Version:                2.9.5
 
 %gometa -f
 
