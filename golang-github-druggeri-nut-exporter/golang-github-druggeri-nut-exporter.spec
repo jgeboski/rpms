@@ -5,7 +5,7 @@
 
 # https://github.com/DRuggeri/nut_exporter
 %global goipath         github.com/DRuggeri/nut_exporter
-Version:                3.0.0
+Version:                3.1.1
 
 %gometa -f
 
@@ -24,12 +24,6 @@ Source0:        %{gosource}
 Source1:        %{shortname}.conf
 Source2:        %{shortname}.service
 Source3:        %{shortname}.sysusers
-
-# Fedora's golang-github-prometheus-common-devel is < 0.41.0, but
-# golang-github-prometheus-exporter-toolkit is >= 0.9.0. The old
-# kingpin gopkg import is still required by prometheus-common, but
-# exporter-toolkit requires the new github import.
-Patch0:         %{shortname}-kingpin-import-fix.patch
 
 BuildRequires:  systemd-rpm-macros
 
