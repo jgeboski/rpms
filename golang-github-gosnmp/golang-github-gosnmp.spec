@@ -4,7 +4,7 @@
 
 # https://github.com/gosnmp/gosnmp
 %global goipath         github.com/gosnmp/gosnmp
-Version:                1.36.1
+Version:                1.37.0
 
 %gometa -f
 
