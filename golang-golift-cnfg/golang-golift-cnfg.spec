@@ -5,7 +5,7 @@
 # https://golift.io/cnfg
 %global goipath         golift.io/cnfg
 %global forgeurl        https://github.com/golift/cnfg
-Version:                0.2.2
+Version:                0.2.3
 
 %gometa -f
 
