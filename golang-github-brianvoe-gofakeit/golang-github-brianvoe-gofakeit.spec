@@ -51,7 +51,8 @@ install -m 0755 -vp %{gobuilddir}/bin/* %{buildroot}%{_bindir}/
 
 %if %{with check}
 %check
-%gocheck
+# Some tests are dependent on yearly time, which has broken in 2024
+%gocheck -d .
 %endif
 
 %files
