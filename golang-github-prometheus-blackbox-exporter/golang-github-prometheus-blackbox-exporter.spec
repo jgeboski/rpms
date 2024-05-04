@@ -5,6 +5,9 @@
 
 # https://github.com/prometheus/blackbox_exporter
 %global goipath         github.com/prometheus/blackbox_exporter
+# Version >=0.25.0 requires:
+# * golang-github-kit-log-devel >=0.2.1
+# * golang-github-prometheus-client-devel >=1.19.0
 Version:                0.24.0
 
 %gometa -f
