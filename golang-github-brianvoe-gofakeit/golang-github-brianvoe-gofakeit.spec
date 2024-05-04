@@ -4,8 +4,7 @@
 # https://github.com/brianvoe/gofakeit
 %global goipath         github.com/brianvoe/gofakeit/v6
 %global forgeurl        https://github.com/brianvoe/gofakeit
-# Tests for golang-github-unpoller-2.9.5 fail with >6.24.0
-Version:                6.24.0
+Version:                6.28.0
 
 %gometa -f
 
@@ -51,8 +50,6 @@ install -m 0755 -vp %{gobuilddir}/bin/* %{buildroot}%{_bindir}/
 
 %if %{with check}
 %check
-# Some tests are dependent on yearly time, which has broken in 2024
-%gocheck -d .
 %endif
 
 %files
