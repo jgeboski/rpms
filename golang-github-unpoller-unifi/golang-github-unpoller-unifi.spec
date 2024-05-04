@@ -4,7 +4,7 @@
 
 # https://github.com/unpoller/unifi
 %global goipath         github.com/unpoller/unifi
-Version:                0.3.15
+Version:                0.4.3
 
 %gometa -f
 
