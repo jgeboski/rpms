@@ -1,0 +1,21 @@
+diff --git a/main.go b/main.go
+index efd0c57..a8be904 100644
+--- a/main.go
++++ b/main.go
+@@ -31,6 +31,7 @@ import (
+ 	"github.com/go-kit/log/level"
+ 	"github.com/pkg/errors"
+ 	"github.com/prometheus/client_golang/prometheus"
++	versioncollector "github.com/prometheus/client_golang/prometheus/collectors/version"
+ 	"github.com/prometheus/client_golang/prometheus/promhttp"
+ 	"github.com/prometheus/common/promlog"
+ 	"github.com/prometheus/common/promlog/flag"
+@@ -58,7 +59,7 @@ var (
+ )
+ 
+ func init() {
+-	prometheus.MustRegister(version.NewCollector("blackbox_exporter"))
++	prometheus.MustRegister(versioncollector.NewCollector("blackbox_exporter"))
+ }
+ 
+ func main() {
