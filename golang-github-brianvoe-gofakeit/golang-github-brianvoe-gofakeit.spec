@@ -4,6 +4,7 @@
 # https://github.com/brianvoe/gofakeit
 %global goipath         github.com/brianvoe/gofakeit/v6
 %global forgeurl        https://github.com/brianvoe/gofakeit
+# V6 is required by golang-github-unpoller-unifi
 Version:                6.28.0
 
 %gometa -f
