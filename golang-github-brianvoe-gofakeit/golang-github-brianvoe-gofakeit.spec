@@ -31,7 +31,6 @@ Source:         %{gosource}
 
 %prep
 %goprep
-%autopatch -p1
 mv cmd/gofakeit/README.md cmd/gofakeit/README.cli.md
 mv cmd/gofakeitserver/README.md cmd/gofakeitserver/README.server.md
 mv data/README.md data/README.data.md

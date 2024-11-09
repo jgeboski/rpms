@@ -28,7 +28,6 @@ Source:         %{gosource}
 
 %prep
 %goprep
-%autopatch -p1
 # For now, avoid building the Iris integration. There is a massive
 # dependency tree here. None of the other RPMs in this repository
 # depend on Iris.

@@ -52,7 +52,6 @@ Requires(pre):  shadow-utils
 
 %prep
 %goprep
-%autopatch -p1
 
 for license in pkg/*/LICENSE; do
   pkgname=$(echo "$license" | cut -d/ -f2)
