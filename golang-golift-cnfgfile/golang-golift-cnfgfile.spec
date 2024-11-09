@@ -5,7 +5,7 @@
 # https://golift.io/cnfgfile
 %global goipath         golift.io/cnfgfile
 %global forgeurl        https://github.com/golift/cnfgfile
-%global commit          f880041cc0a0d910bfde3a54ef32c5c12a9d17af
+%global commit          a5436d84eb481ffa82fbe72fa37b5ec4b27df370
 
 %gometa -f
 
