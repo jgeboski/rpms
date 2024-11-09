@@ -4,7 +4,7 @@
 
 # https://github.com/robbiet480/go.nut
 %global goipath         github.com/robbiet480/go.nut
-%global commit          bd8f121e1fa1ebe153728be14a9538473e80ce02
+%global commit          60e196249c53733253ffab76acbd1e35abf5f79d
 
 %gometa -f
 
