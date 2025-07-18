@@ -5,10 +5,8 @@
 
 # https://github.com/prometheus/blackbox_exporter
 %global goipath         github.com/prometheus/blackbox_exporter
-# Version >=0.25.0 requires:
-# * golang-github-kit-log-devel >=0.2.1
-# * golang-github-prometheus-client-devel >=1.19.0
-Version:                0.24.0
+# >=0.27.0 requires >=golang-github-prometheus-common-devel-0.63.0
+Version:                0.26.0
 
 %gometa -f
 
@@ -29,9 +27,6 @@ Source1:        %{shortname}.conf
 Source2:        %{shortname}.service
 Source3:        %{shortname}.sysusers
 
-# Required for <0.25.0 with >=golang-github-prometheus-common-devel-0.50.0
-Patch0:         prometheus-blackbox-exporter-new-version-collector-package.patch
-
 BuildRequires:  systemd-rpm-macros
 
 Requires(pre): shadow-utils
@@ -43,7 +38,6 @@ Requires(pre): shadow-utils
 
 %prep
 %goprep
-%autopatch -p1
 
 %generate_buildrequires
 %go_generate_buildrequires
