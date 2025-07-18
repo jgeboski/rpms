@@ -4,7 +4,7 @@
 
 # https://github.com/oapi-codegen/runtime
 %global goipath         github.com/oapi-codegen/runtime
-Version:                1.1.1
+Version:                1.1.2
 
 %gometa -L -f
 
