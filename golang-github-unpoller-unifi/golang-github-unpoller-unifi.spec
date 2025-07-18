@@ -3,8 +3,8 @@
 %global debug_package %{nil}
 
 # https://github.com/unpoller/unifi
-%global goipath         github.com/unpoller/unifi
-Version:                0.4.3
+%global goipath         github.com/unpoller/unifi/v5
+Version:                5.1.0
 
 %gometa -f
 
