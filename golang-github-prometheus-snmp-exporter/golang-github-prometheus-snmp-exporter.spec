@@ -5,7 +5,7 @@
 
 # https://github.com/prometheus/snmp_exporter
 %global goipath         github.com/prometheus/snmp_exporter
-Version:                0.26.0
+Version:                0.29.0
 
 %gometa -f
 

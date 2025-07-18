@@ -1,9 +1,9 @@
 diff --git a/generator/main.go b/generator/main.go
-index 464908e..8188bbe 100644
+index 8e61281..5be29db 100644
 --- a/generator/main.go
 +++ b/generator/main.go
-@@ -104,8 +104,8 @@ var (
- 	snmpMIBOpts        = kingpin.Flag("snmp.mibopts", "Toggle various defaults controlling MIB parsing, see snmpwalk --help").Default("e").String()
+@@ -106,8 +106,8 @@ var (
+ 	snmpMIBOpts        = kingpin.Flag("snmp.mibopts", "Toggle various defaults controlling MIB parsing, see snmpwalk --help").Default("eu").String()
  	generateCommand    = kingpin.Command("generate", "Generate snmp.yml from generator.yml")
  	userMibsDir        = kingpin.Flag("mibs-dir", "Paths to mibs directory").Default("").Short('m').Strings()
 -	generatorYmlPath   = generateCommand.Flag("generator-path", "Path to the input generator.yml file").Default("generator.yml").Short('g').String()
