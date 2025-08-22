@@ -10,6 +10,7 @@ https://copr.fedorainfracloud.org/coprs/jgeboski/
 The dependency tree of the RPMs in this repository:
 
 ```
++-- gasket
 +-- gasket-kmod
 +-- golang-github-druggeri-nut-exporter
 |   +-- golang-github-robbiet480-nut
