@@ -1,5 +1,5 @@
-%define buildforkernels current
-%define repo rpmfusion
+%global buildforkernels akmod
+%global repo rpmfusion
 %global debug_package %{nil}
 
 %global commit 5815ee3908a46a415aac616ac7b9aedcb98a504c
@@ -15,9 +15,9 @@ URL:            https://github.com/google/gasket-driver
 Source0:        https://github.com/google/gasket-driver/archive/%{commit}/gasket-driver-%{shortcommit}.tar.gz
 Patch0:         gasket-kmod-kernel-6.13.patch
 
-BuildRequires:  %{_bindir}/kmodtool
-
-%{!?kernels:BuildRequires: buildsys-build-rpmfusion-kerneldevpkgs-%{?buildforkernels:%{buildforkernels}}%{!?buildforkernels:current}-%{_target_cpu} }
+BuildRequires:  elfutils-libelf-devel
+BuildRequires:  gcc
+BuildRequires:  kmodtool
 
 %{expand:%(kmodtool --target %{_target_cpu} --repo %{repo} --kmodname %{name} %{?buildforkernels:--%{buildforkernels}} %{?kernels:--for-kernels "%{?kernels}"} 2>/dev/null) }
 
