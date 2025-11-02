@@ -23,5 +23,4 @@ The dependency tree of the RPMs in this repository:
 |       +-- golang-github-brianvoe-gofakeit
 |   +-- golang-golift-cnfgfile
 |       +-- golang-golift-cnfg
-|   +-- golang-golift-version
 ```
