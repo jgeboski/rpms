@@ -13,7 +13,6 @@ The dependency tree of the RPMs in this repository:
 +-- gasket
 +-- gasket-kmod
 +-- golang-github-druggeri-nut-exporter
-|   +-- golang-github-robbiet480-nut
 +-- golang-github-prometheus-blackbox-exporter
 +-- golang-github-prometheus-snmp-exporter
 |   +-- golang-github-gosnmp
