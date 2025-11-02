@@ -22,5 +22,4 @@ The dependency tree of the RPMs in this repository:
 |   +-- golang-github-unpoller-unifi
 |       +-- golang-github-brianvoe-gofakeit
 |   +-- golang-golift-cnfgfile
-|       +-- golang-golift-cnfg
 ```
