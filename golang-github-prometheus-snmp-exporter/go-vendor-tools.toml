@@ -1,0 +1,8 @@
+[archive]
+
+[licensing]
+detector = "askalono"
+[[licensing.licenses]]
+path = "vendor/github.com/gosnmp/gosnmp/LICENSE"
+sha256sum = "28b63cdfceda72f7b8c9a8db2d7ab07661eb4d6bb9fc020077925b6b4faf84fa"
+expression = "(BSD-3-Clause AND BSD-2-Clause) AND BSD-3-Clause"
