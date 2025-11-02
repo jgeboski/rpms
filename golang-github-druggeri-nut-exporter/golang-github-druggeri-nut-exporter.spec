@@ -2,9 +2,9 @@
 %bcond check 1
 
 # https://github.com/DRuggeri/nut_exporter
-%global goipath         github.com/DRuggeri/nut_exporter
+%global goipath         github.com/DRuggeri/nut_exporter/v3
 %global shortname       druggeri-nut-exporter
-Version:                3.2.1
+Version:                3.2.2
 
 %gometa -L -f
 
