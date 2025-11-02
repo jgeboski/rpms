@@ -15,7 +15,6 @@ The dependency tree of the RPMs in this repository:
 +-- golang-github-druggeri-nut-exporter
 +-- golang-github-prometheus-blackbox-exporter
 +-- golang-github-prometheus-snmp-exporter
-|   +-- golang-github-gosnmp
 +-- golang-github-unpoller
 |   +-- golang-github-datadog
 |   +-- golang-github-influxdata-influxdb-client
