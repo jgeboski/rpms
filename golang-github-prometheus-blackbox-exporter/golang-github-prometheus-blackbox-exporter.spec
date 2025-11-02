@@ -4,7 +4,7 @@
 # https://github.com/prometheus/blackbox_exporter
 %global goipath         github.com/prometheus/blackbox_exporter
 %global shortname       prometheus-blackbox-exporter
-Version:                0.26.0
+Version:                0.27.0
 
 %gometa -L -f
 
