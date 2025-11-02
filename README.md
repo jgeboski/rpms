@@ -20,5 +20,4 @@ The dependency tree of the RPMs in this repository:
 |       +-- golang-github-influxdata-line-protocol
 |       +-- golang-github-oapi-codegen-runtime
 |   +-- golang-github-unpoller-unifi
-|       +-- golang-github-brianvoe-gofakeit
 ```
