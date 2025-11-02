@@ -17,5 +17,4 @@ The dependency tree of the RPMs in this repository:
 +-- golang-github-prometheus-snmp-exporter
 +-- golang-github-unpoller
 |   +-- golang-github-influxdata-influxdb-client
-|       +-- golang-github-influxdata-line-protocol
 ```
