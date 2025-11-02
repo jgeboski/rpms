@@ -4,7 +4,7 @@
 # https://github.com/unpoller/unpoller
 %global goipath         github.com/unpoller/unpoller
 %global shortname       unpoller
-Version:                2.15.3
+Version:                2.15.4
 
 %gometa -L -f
 
